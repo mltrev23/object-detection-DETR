@@ -3,6 +3,7 @@ import torch
 from PIL import Image
 import requests
 from io import BytesIO
+import matplotlib.pyplot as plt
 
 #url = "http://images.cocodataset.org/val2017/000000039769.jpg"
 
@@ -12,7 +13,10 @@ from io import BytesIO
 # Open the image from the bytes of the response content
 #image = Image.open(BytesIO(response.content))
 image = Image.open('test.jpg')
-image.show()  # This will open the image using an image viewer
+#image.show()  # This will open the image using an image viewer
+plt.imshow(image)
+plt.axis('off')
+plt.show()
 
 # you can specify the revision tag if you don't want the timm dependency
 processor = DetrImageProcessor.from_pretrained("facebook/detr-resnet-50", revision="no_timm")
