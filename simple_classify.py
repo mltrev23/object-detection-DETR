@@ -12,7 +12,6 @@ response.raise_for_status()  # Raises stored HTTPError, if one occurred
 # Open the image from the bytes of the response content
 image = Image.open(BytesIO(response.content))
 image.show()  # This will open the image using an image viewer
-image.save('test.jpg')
 
 # you can specify the revision tag if you don't want the timm dependency
 processor = DetrImageProcessor.from_pretrained("facebook/detr-resnet-50", revision="no_timm")
