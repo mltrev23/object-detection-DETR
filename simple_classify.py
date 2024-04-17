@@ -4,13 +4,14 @@ from PIL import Image
 import requests
 from io import BytesIO
 
-url = "http://images.cocodataset.org/val2017/000000039769.jpg"
+#url = "http://images.cocodataset.org/val2017/000000039769.jpg"
 
-response = requests.get(url)
-response.raise_for_status()  # Raises stored HTTPError, if one occurred
+#response = requests.get(url)
+#response.raise_for_status()  # Raises stored HTTPError, if one occurred
 
 # Open the image from the bytes of the response content
-image = Image.open(BytesIO(response.content))
+#image = Image.open(BytesIO(response.content))
+image = Image.open('test.jpg')
 image.show()  # This will open the image using an image viewer
 
 # you can specify the revision tag if you don't want the timm dependency
