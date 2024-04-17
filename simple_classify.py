@@ -40,7 +40,7 @@ for score, label, box in zip(results["scores"], results["labels"], results["boxe
     )
     top_left_corner = (box[0], box[1])  # x, y of the top left corner
     bottom_right_corner = (box[2], box[3])  # x, y of the bottom right corner
-    draw.rectangle([top_left_corner, bottom_right_corner], outline="red", width=3)
+    draw.rectangle([top_left_corner, bottom_right_corner], outline="green", width=3)
 
 image.save('out.jpg')
 #image.show()
